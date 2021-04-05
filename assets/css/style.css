@@ -103,6 +103,10 @@ height: 195px;
   margin-left: 0px; 
 }
 
+#logo:hover{
+  color: #3A5199;
+}
+
 nav{ 
   position: absolute;
   right: 60px;
@@ -493,12 +497,163 @@ font-size: 25px;
   border-radius: 50%;
   border: 3px solid #3A5199;
   transition: 0.3s;
-   
+
+}
+
+/*Contact Page*/
+
+.page-title-container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  max-height: 320px;
+  background-color: #3A5199;
+}
+
+.page-title{
+  color: white;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+.page-title h1{
+font-size: 65px;
+}
+
+.contactform-container{
+  width: auto;
+  max-height: auto;
+  position: relative;
+}
+
+.contact-form-clomns{
+  max-width: 1600px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  padding: 0px 20px 0 20px;
+}
+
+.contact-welcomemessage{
+  width: 50%;
+  padding-right: 130px;
 }
 
 
+.contact-welcomemessage h2{
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size:55px ;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.contact-welcomemessage p{
+  font-family: 'Montserrat', sans-serif;
+  font-size:22px ;
+  margin-bottom: 100px;
+  margin: 0 auto;
+}
+
+.contact-icons-container{
+  
+
+}
+
+.contact-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 400px;
+  margin-top: 30px;
+}
+
+.icons{
+  width: 30%;
+  justify-content: flex-start;
+}
+
+.icons-content{
+  width: 70%;
+  justify-content: flex-start;
+}
+.contactform{
+  width: auto;
+  padding-right: 10px;
+  margin: 0 auto;
+}
 
 
+form{
+  max-width: 800px;
+}
+
+label{
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+input{
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+textarea{
+  resize:vertical;
+  max-height:170px;
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+}
+
+input, textarea {
+  outline: none;
+  border: 1px solid #3A5199;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 4px rgba(255, 0, 0, .5);
+  border: 1px solid #3A5199;
+}
+
+::placeholder{
+  color: #3A5199;
+  opacity: 1;
+  font-size: 14px;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.button{
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #3A5199;
+  padding: 15px 25px;
+  margin-top: 10px;
+}
+
+.button:hover{
+  color: #3A5199;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #D5D6D2;
+  padding: 15px 25px;
+  transition: 0.3s;
+}
 
 /* Large screens ----------- */
 @media only screen  and (max-width : 1900px) {
@@ -512,9 +667,7 @@ font-size: 25px;
   .herosliderbuttomn{
     margin-top: 50px;
   }
-
 }
-
 
 @media only screen  and (max-width : 1320px) {
   .hero-art-profile img{
@@ -530,7 +683,6 @@ font-size: 25px;
     width: auto;
     height: 580px;
 }
-
   .main-hero::after{
     height: 580px;
   }
@@ -574,7 +726,15 @@ font-size: 25px;
     margin: 0 auto;
     width: auto;
   }
+  .contact-form-clomns{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left:50px;
+  }
 
+  .contact-welcomemessage{
+    width: 560px;
+  }
 
 }
 
@@ -653,7 +813,7 @@ font-size: 25px;
     margin-bottom: 15px;
   }
   .icons{
-  margin-top: 60px;
+ 
   }
  
   .main-portfolio{
@@ -673,6 +833,8 @@ font-size: 25px;
   width: 90%;
   height: auto;
 }
+
+
 
 }
 
@@ -697,12 +859,16 @@ font-size: 25px;
     font-family: 'Montserrat', sans-serif;
   }
 
+
+
   }
 
 @media only screen  and (max-width : 899px) {
+  /*
   .hero-content >*{
     display: none;
   }
+  */
   .main-nav{
     display: none;
   }
@@ -715,8 +881,63 @@ font-size: 25px;
     width: 300px;
   }
 
+  .hero-content{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .hero-art-profile{
+    width: auto;
+    height: auto;
+    z-index: 2;
+    margin-left: 10px;
+  }
+  .heading{
+    position: absolute;
+    bottom: 80px;
+    left: 25px;
+    width: 240px;
   }
 
+  .herosliderbuttomn a{
+    font-size: 12px;
+    padding: 15px 35px;
+  }
+  .herosliderbuttomn a:hover{
+    font-size: 12px;
+    padding: 15px 35px;
+  }
+  .heading, h1{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .heading, p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  .contact-form-clomns{
+    max-width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .contactform{
+   margin: 50px 0;
+   padding-right: 0px;
+  }
+
+  form{
+    max-width: auto;
+  }
+  
+}
 
 /* iPhone XS Max, XR ----------- */
 @media only screen and (max-device-width: 414px){
@@ -731,10 +952,4 @@ font-size: 25px;
   .main-nav{
     display: none;
   }
- 
-
 }
-
-
-
-
